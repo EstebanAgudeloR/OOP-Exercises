@@ -20,7 +20,6 @@ public class Automóvil {
     int velocidadMáxima;
     tipoColor color;
     int velocidadActual = 0;
-    
     Automóvil(String marca, int modelo, int motor, tipoCom
         tipoCombustible, tipoA tipoAutomóvil, int númeroPuertas, int cantidadAsientos, int velocidadMáxima, tipoColor color) {
               
@@ -134,10 +133,5 @@ public class Automóvil {
     System.out.println("Velocida máxima = "+ velocidadMáxima);
     System.out.println("Color = " + color);
     
-    }
-    
-    
-    
-    
-    
+    }  
 }

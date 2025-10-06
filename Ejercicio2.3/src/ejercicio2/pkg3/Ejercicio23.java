@@ -5,7 +5,7 @@
 package ejercicio2.pkg3;
 
 /**
- *
+ *ma
  * @author esagudelor
  */
 public class Ejercicio23 {
