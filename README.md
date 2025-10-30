@@ -2,7 +2,7 @@ Overview
 
 This repository gathers exercises in Java and Python focused on practicing Object-Oriented Programming (OOP) concepts such as classes, methods, encapsulation, and modularity.
 
-The exercises were developed using NetBeans and Google Colab, and organized with GitHub version control to document the learning process and make it easier to review and track progress.
+The exercises were developed using NetBeans,Google Colab,VS code and organized with GitHub version control to document the learning process and make it easier to review and track progress.
 
 Purpose
 
