@@ -55,6 +55,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         txtRaizCuadrada.setEditable(false);
 
         btnCalcular.setText("Calcular");
+        btnCalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalcularActionPerformed(evt);
+            }
+        });
 
         btnLimpiar.setText("Limpiar");
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
@@ -120,8 +125,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         raiz_cuadrada = CalculosNumericos.calcularRaizCuadrada(numero);
         txtLogaritmoNeperiano.setText(String.valueOf(logaritmo_neperiano));
         txtRaizCuadrada.setText(String.valueOf(raiz_cuadrada));
-        
-        
+
         
     }//GEN-LAST:event_txtLogaritmoNeperianoActionPerformed
 
@@ -130,6 +134,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
      txtLogaritmoNeperiano.setText("");
      txtRaizCuadrada.setText("");
     }//GEN-LAST:event_btnLimpiarActionPerformed
+
+    private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCalcularActionPerformed
 
     /**
      * @param args the command line arguments

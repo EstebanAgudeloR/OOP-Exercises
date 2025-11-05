@@ -218,7 +218,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void btningresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btningresarActionPerformed
        
         try {
-            String nombre=String.valueOf(txtEquipo.getText());
+            String nombre = String.valueOf(txtEquipo.getText());
             String universidad = String.valueOf(txtUniversidad.getText());
             String lenguaje = String.valueOf(txtLenguaje.getText());
             

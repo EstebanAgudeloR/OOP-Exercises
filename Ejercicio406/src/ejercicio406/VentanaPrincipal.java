@@ -34,7 +34,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         txtNombre = new javax.swing.JTextField();
         txtApellido = new javax.swing.JTextField();
         txtEdad = new javax.swing.JTextField();
-        lbMensaje = new javax.swing.JLabel();
+        lblMensaje = new javax.swing.JLabel();
         btnlimpiar = new javax.swing.JButton();
         btnIngresar = new javax.swing.JButton();
 
@@ -52,7 +52,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        lbMensaje.setText("jLabel1");
+        lblMensaje.setText("jLabel1");
 
         btnlimpiar.setText("Limpiar");
         btnlimpiar.addActionListener(new java.awt.event.ActionListener() {
@@ -62,35 +62,43 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
 
         btnIngresar.setText("Ingresar");
+        btnIngresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIngresarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(67, 67, 67)
+                .addComponent(btnIngresar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnlimpiar)
+                .addGap(91, 91, 91))
+            .addGroup(layout.createSequentialGroup()
                 .addGap(46, 46, 46)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(nombreVendedor)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                        .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lblMensaje)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(apellidoVendedor)
-                            .addComponent(edadVendedor)
-                            .addComponent(lbMensaje)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(13, 13, 13)
-                                .addComponent(btnIngresar)))
-                        .addGap(39, 39, 39)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtApellido)
-                            .addComponent(txtEdad)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(btnlimpiar)
-                                .addGap(37, 37, 37)))))
-                .addGap(38, 38, 38))
+                                .addComponent(nombreVendedor)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                                .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(apellidoVendedor)
+                                    .addComponent(edadVendedor))
+                                .addGap(39, 39, 39)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtApellido)
+                                    .addComponent(txtEdad))))
+                        .addGap(38, 38, 38))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -107,17 +115,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(edadVendedor)
                     .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE)
-                        .addComponent(lbMensaje)
-                        .addGap(41, 41, 41))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnlimpiar)
-                            .addComponent(btnIngresar))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
+                .addComponent(lblMensaje)
+                .addGap(37, 37, 37)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnlimpiar)
+                    .addComponent(btnIngresar))
+                .addGap(32, 32, 32))
         );
 
         pack();
@@ -127,12 +131,30 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         txtNombre.setText("");
         txtApellido.setText("");
         txtEdad.setText("");
-        lbMensaje.setText(""); 
+        lblMensaje.setText(""); 
     }//GEN-LAST:event_btnlimpiarActionPerformed
 
     private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNombreActionPerformed
+
+    private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
+
+        try {
+            String Nombre = String.valueOf(txtNombre.getText());
+            String Apellido = String.valueOf(txtApellido.getText());
+            int Edad = Integer.parseInt(txtEdad.getText());
+
+            Vendedor vendedor = new Vendedor(Nombre , Apellido);
+
+            Vendedor.VerificarEdad(Edad);
+            lblMensaje.setText("Datos ingresados Correctamente");
+
+        }
+        catch (Exception e){
+            lblMensaje.setText(e.getMessage());
+        }
+    }//GEN-LAST:event_btnIngresarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -164,7 +186,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnIngresar;
     private javax.swing.JButton btnlimpiar;
     private javax.swing.JLabel edadVendedor;
-    private javax.swing.JLabel lbMensaje;
+    private javax.swing.JLabel lblMensaje;
     private javax.swing.JLabel nombreVendedor;
     private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtEdad;
